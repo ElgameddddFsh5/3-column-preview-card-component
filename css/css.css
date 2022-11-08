@@ -1,0 +1,104 @@
+:root {
+  /* ### Primary */
+  --Bright-orange: hsl(31, 77%, 52%);
+  --Dark-cyan: hsl(184, 100%, 22%);
+  --Very-dark-cyan: hsl(179, 100%, 13%);
+  /* ### Neutral */
+  --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Big Shoulders Display";
+}
+body {
+  background-color: var(--Very-light-gray-background-headings-buttons);
+}
+main section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section .container {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  color: white;
+}
+
+main section .container .card {
+  width: 300px;
+  height: 500px;
+  padding: 50px;
+}
+main section .container .card1 {
+  background-color: var(--Bright-orange);
+  border-radius: 10px 0px 0px 10px;
+}
+main section .container .card2 {
+  background-color: var(--Dark-cyan);
+}
+main section .container .card3 {
+  background-color: var(--Very-dark-cyan);
+  border-radius: 0px 10px 10px 0px;
+}
+main section .container .card h1 {
+  font-size: 35px;
+  margin: 30px 0px 0px 0px;
+}
+main section .container .card h2 {
+  font-family: "Lexend Deca";
+  font-size: 14px;
+  line-height: 25px;
+  font-weight: 400;
+  color: var(--Transparent-white-paragraphs);
+  margin: 30px 0px 100px 0px;
+}
+main section .container .card span {
+  font-family: "Lexend Deca";
+  padding: 14px 35px;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-size: 14px;
+}
+main section .container .card span:hover {
+  background-color: white;
+  cursor: pointer;
+}
+main section .container .card1 span:hover {
+  color: var(--Bright-orange);
+}
+main section .container .card2 span:hover {
+  color: var(--Dark-cyan);
+}
+main section .container .card3 span:hover {
+  color: var(--Very-dark-cyan);
+}
+@media (max-width: 400px) {
+  main section {
+    height: 100%;
+    margin: 100px 0px;
+  }
+  main section .container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+  main section .container .card1 {
+    border-radius: 10px 10px 0px 0px;
+  }
+  main section .container .card3 {
+    border-radius: 0px 0px 10px 10px;
+  }
+}
+@media (max-width: 767px) {
+  main section {
+    height: 100%;
+    margin: 100px 0px;
+  }
+  main section .container {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+  }
+}
